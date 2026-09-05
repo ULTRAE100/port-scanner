@@ -1,105 +1,117 @@
-"# ?? TCP Port Scanner" 
-"" 
-"A multi-threaded TCP port scanner with banner grabbing and service detection." 
-"" 
-"## ? Features" 
-"" 
-"- ? **Fast multi-threaded scanning** - Scan hundreds of ports in seconds" 
-"- ?? **Port ranges** - Scan entire ranges (e.g., \`1-1000\`)" 
-"- ?? **Custom thread count** - Control scanning speed" 
-"- ?? **Command-line interface** - Easy to use" 
-"- ?? **Reverse DNS lookup** - Identifies hostnames" 
-"- ??? **Service detection** - Identifies HTTP, SSH, FTP, MySQL, Redis, and more" 
-"- ?? **Banner grabbing** - Grabs service banners and versions" 
-"- ?? **Detailed summary** - Shows open ports, services, and banners" 
-"" 
-"## ?? Versions" 
-"" 
-"| Version | Features |" 
-"|---------|----------|" 
-"| v1.0 | Basic TCP scanner with detailed comments |" 
-"| v1.1 | Command-line arguments with argparse and help |" 
-"| v2.0 | Multi-threading for parallel port scanning |" 
-"| v2.1 | Port range support (single, ranges, mixed format) |" 
-"| v3.0 | Banner grabbing and service detection |" 
-"" 
-"## ?? Installation" 
-"" 
-"\`\`\`bash" 
-"git clone https://github.com/ULTRAE100/port-scanner.git" 
-"cd port-scanner" 
-"\`\`\`" 
-"" 
-"## ?? Usage" 
-"" 
-"### Basic Scan" 
-"\`\`\`bash" 
-"python port_scanner_v3.0.py google.com 80,443,22" 
-"\`\`\`" 
-"" 
-"### Port Ranges" 
-"\`\`\`bash" 
-"python port_scanner_v3.0.py example.com 1-1000" 
-"\`\`\`" 
-"" 
-"### Mixed Ports" 
-"\`\`\`bash" 
-"python port_scanner_v3.0.py google.com 80,443,22,1000-2000,8080" 
-"\`\`\`" 
-"" 
-"### Custom Threads" 
-"\`\`\`bash" 
-"python port_scanner_v3.0.py example.com 1-5000 -t 50" 
-"\`\`\`" 
-"" 
-"### Disable Banner Grabbing" 
-"\`\`\`bash" 
-"python port_scanner_v3.0.py google.com 80,443,22 --no-banner" 
-"\`\`\`" 
-"" 
-"### Verbose Mode" 
-"\`\`\`bash" 
-"python port_scanner_v3.0.py google.com 80,443,22 -v" 
-"\`\`\`" 
-"" 
-"## ?? Example Output" 
-"" 
-"\`\`\`" 
-"[+] Starting advanced scan..." 
-"[+] Target: google.com" 
-"[+] Ports: 80,443,22" 
-"[+] Total ports: 3" 
-"[+] Threads: 10" 
-"[+] Banner Grabbing: Enabled" 
-"==================================================" 
-"" 
-"[+] Scan Result of: tzpara-ao-in-f14.1e100.net (142.250.185.78)" 
-"[+] Total ports to scan: 3" 
-"[+] Performing banner grabbing on open ports..." 
-"" 
-"[+] 80/tcp open  - HTTP (gws)" 
-"[+] 443/tcp open - HTTP (gws)" 
-"[+] 22/tcp open  - SSH (OpenSSH 7.6p1)" 
-"" 
-"==================================================" 
-"[+] Scan completed in 1.45 seconds" 
-"[+] Found 3 open ports" 
-"" 
-"[+] Open Ports with Service Information:" 
-"--------------------------------------------------" 
-"  80/tcp       HTTP (gws)" 
-"  443/tcp      HTTP (gws)" 
-"  22/tcp       SSH (OpenSSH 7.6p1)" 
-"\`\`\`" 
-"" 
-"## ?? Disclaimer" 
-"" 
-"This tool is for **educational purposes only**. Only scan systems you own or have explicit permission to test." 
-"" 
-"## ?? License" 
-"" 
-"MIT License" 
-"" 
-"## ?? Author" 
-"" 
-"[Ferdinand Nketia-Dardom](https://github.com/ULTRAE100)" 
+# TCP Port Scanner
+
+A multi-threaded TCP port scanner with banner grabbing and service detection.
+
+## Features
+
+- **Fast multi-threaded scanning** - Scan hundreds of ports in seconds
+- **Port ranges** - Scan entire ranges (e.g., 1-1000)
+- **Custom thread count** - Control scanning speed
+- **Command-line interface** - Easy to use
+- **Reverse DNS lookup** - Identifies hostnames
+- **Service detection** - Identifies HTTP, SSH, FTP, MySQL, Redis, and more
+- **Banner grabbing** - Grabs service banners and versions
+- **Detailed summary** - Shows open ports, services, and banners
+
+## Versions
+
+| Version | Features |
+|---------|----------|
+| v1.0 | Basic TCP scanner with detailed comments |
+| v1.1 | Command-line arguments with argparse and help |
+| v2.0 | Multi-threading for parallel port scanning |
+| v2.1 | Port range support (single, ranges, mixed format) |
+| v3.0 | Banner grabbing and service detection |
+
+## Installation
+
+```bash
+git clone https://github.com/ULTRAE100/port-scanner.git
+cd port-scanner
+```
+
+## Usage
+
+### Basic Scan
+
+```bash
+python port_scanner_v3.0.py google.com 80,443,22
+```
+
+### Port Ranges
+
+```bash
+python port_scanner_v3.0.py example.com 1-1000
+```
+
+### Mixed Ports
+
+```bash
+python port_scanner_v3.0.py google.com 80,443,22,1000-2000,8080
+```
+
+### Custom Threads
+
+```bash
+python port_scanner_v3.0.py example.com 1-5000 -t 50
+```
+
+### Disable Banner Grabbing
+
+```bash
+python port_scanner_v3.0.py google.com 80,443,22 --no-banner
+```
+
+### Verbose Mode
+
+```bash
+python port_scanner_v3.0.py google.com 80,443,22 -v
+```
+
+### Show Help
+
+```bash
+python port_scanner_v3.0.py -h
+```
+
+## Example Output
+
+```
+[+] Starting advanced scan...
+[+] Target: google.com
+[+] Ports: 80,443,22
+[+] Total ports: 3
+[+] Threads: 10
+[+] Banner Grabbing: Enabled
+==================================================
+
+[+] Scan Result of: tzpara-ao-in-f14.1e100.net (142.250.185.78)
+[+] Total ports to scan: 3
+[+] Performing banner grabbing on open ports...
+
+[+] 80/tcp open  - HTTP (gws)
+[+] 443/tcp open - HTTP (gws)
+[+] 22/tcp open  - SSH (OpenSSH 7.6p1)
+
+==================================================
+[+] Scan completed in 1.45 seconds
+[+] Found 3 open ports
+
+[+] Open Ports with Service Information:
+--------------------------------------------------
+  80/tcp       HTTP (gws)
+  443/tcp      HTTP (gws)
+  22/tcp       SSH (OpenSSH 7.6p1)
+```
+
+## Disclaimer
+
+This tool is for **educational purposes only**. Only scan systems you own or have explicit permission to test.
+
+## License
+
+MIT License
+
+## Author
+
+[Ferdinand Nketia-Dardom](https://github.com/ULTRAE100)
